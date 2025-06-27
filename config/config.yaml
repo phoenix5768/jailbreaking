@@ -3,9 +3,6 @@ model:
   victim_model: "llama3.2:1b"
   ollama_url: "http://localhost:11434/api/chat"  # Ollama local API endpoint
   langchain_model: "llama"  # LangChain model to use
-# Agreement scorer (evaluates how much victim agrees with claim)
-#  agreement_scorer_model: "llama3.2:1b"
-#  agreement_scorer_api_url: "http://localhost:11434/api/generate"
 
   judge_model: "llama-guard3:1b"
   judge_api_url: "http://localhost:11434/api/generate"  # This judge also uses /api/generate
