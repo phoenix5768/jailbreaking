@@ -1,5 +1,38 @@
-[
-  {
-
-  }
-]
+{
+  "technique_categories": [
+    {
+      "category": "Cognitive Manipulation",
+      "techniques": [
+        "Belief Consistency Trap",
+        "Reverse Psychology",
+        "Goal Redirection",
+        "Knowledge Boosting",
+        "Safety Obfuscation"
+      ]
+    },
+    {
+      "category": "Social Role Framing",
+      "techniques": [
+        "Roleplay (Deceptive Persona)",
+        "Hypothetical Framing",
+        "Peer Framing",
+        "Trust-building"
+      ]
+    },
+    {
+      "category": "Emotional Exploitation",
+      "techniques": [
+        "Empathy Exploitation",
+        "Emotional Guilt",
+        "Prior Success Pressure"
+      ]
+    },
+    {
+      "category": "Persistence & Subversion",
+      "techniques": [
+        "Persistence (Repetition)",
+        "Token Smuggling"
+      ]
+    }
+  ]
+}
