@@ -6,6 +6,5 @@ model:
   ollama_url: "http://localhost:11434/api/chat"  # Ollama local API endpoint
   langchain_model: "llama"  # LangChain model to use
 
-#  judge_model: "llama-guard3:1b"
-  judge_model: "mistral"
+  judge_model: "llama-guard3:1b"
   judge_api_url: "http://localhost:11434/api/generate"  # This judge also uses /api/generate
