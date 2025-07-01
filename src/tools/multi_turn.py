@@ -158,11 +158,12 @@ def run_multi_turn(
             jailbreaker_query=jailbreaker_query
         )
         result.append({
-            "goal": prompt,
+            "goal": prompt.get("goal"),
             "result": responses
         })
         count += 1
         logger.info(f"{count}/100")
-        filename = f"mt_results/results.json"
-        with open(filename, "w") as f:
-            json.dump(result, f, indent=2)
+
+    filename = f"mt_results/results.json"
+    with open(filename, "w") as f:
+        json.dump(result, f, indent=2)
