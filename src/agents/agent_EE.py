@@ -25,31 +25,17 @@ class PersuadeeAgent:
         }
         data = {
             "model": self.model_name,
-            "messages": messages,
-            "temperature": 0.5,
-            "stream": stream
+            "messages": messages
         }
-        
+
         try:
             response = requests.post(self.ollama_url, headers=headers, json=data)
             response.raise_for_status()
-            
-            if stream:
-                full_response = ""
-                for line in response.iter_lines():
-                    if line:
-                        json_response = json.loads(line)
-                        content = json_response.get("message", {}).get("content", "")
-                        full_response += content
-                        logger.info(content, end="", flush=True)
-                    if json_response.get("done", False):
-                        logger.info(' ')
-                        break
-                return full_response
-            else:
-                # Handle non-streaming response
-                json_response = response.json()
-                return json_response["message"]["content"]
+
+            # Handle non-streaming response
+            json_response = response.json()
+            # logger.info(json_response.get('choices'))
+            return json_response.get('choices')[0]["message"]["content"]
                 
         except requests.exceptions.RequestException as e:
             logger.error(f"Error connecting to Ollama: {e}")

@@ -45,14 +45,14 @@ def conversation(
 
     jailbreaker_history.append({"role": "user", "content": jailbreaker_query})
     jailbreak_reply = jailbreaker.query(jailbreaker_history)
-    # logger.info(f"Jailbreaker prompts: {jailbreak_reply}")
+    logger.info(f"Jailbreaker prompts: {jailbreak_reply}")
 
     victim_history.append({"role": "user", "content": jailbreak_reply})
     victim_reply = victim.query(victim_history)
-    # logger.info(f"Victim replies: {victim_reply}")
+    logger.info(f"Victim replies: {victim_reply}")
 
     safety_verdict = judge.classify_response(victim_reply)
-    # logger.info(f'Safety verdict: {safety_verdict}')
+    logger.info(f'Safety verdict: {safety_verdict}')
 
     return jailbreak_reply, victim_reply, safety_verdict
 

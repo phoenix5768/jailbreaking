@@ -136,7 +136,7 @@ def run_test(
             victim_prompt=get_v_system_prompt(),
             jailbreaker_query=jailbreaker_query
         )
-        logger.info(result)
+        # logger.info(result)
 
 
 def run_multi_turn(
