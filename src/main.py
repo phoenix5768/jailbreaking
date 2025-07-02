@@ -36,13 +36,13 @@ def main():
     # )
 
     ### Running Single-turn on 14 techniques and 100 prompts
-    single_turn.run_single_turn(
-        prompts=prompts,
-        techniques=techniques,
-        jailbreaker=jailbreaker,
-        victim=victim,
-        judge=judge
-    )
+    # single_turn.run_single_turn(
+    #     prompts=prompts,
+    #     techniques=techniques,
+    #     jailbreaker=jailbreaker,
+    #     victim=victim,
+    #     judge=judge
+    # )
 
     ###################################### Multi-turn ##################################################################
     ### Testing case
