@@ -1,10 +1,10 @@
 model:
-#  jailbreaker_model: "huihui_ai/llama3.2-abliterate:1b"
-#  victim_model: "llama3.2:1b"
-  jailbreaker_model: "openchat"
-  victim_model: "mistral"
-  ollama_url: "http://localhost:11434/api/chat"  # Ollama local API endpoint
-  langchain_model: "llama"  # LangChain model to use
+  # Distant endpoint
+  victim_model: "Qwen/Qwen1.5-7B-Chat"
+  victim_url: "http://134.76.18.30:8084/v1/chat/completions"
 
-  judge_model: "llama-guard3:1b"
-  judge_api_url: "http://localhost:11434/api/generate"  # This judge also uses /api/generate
+  jailbreaker_model: "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated"
+  jailbreaker_url: "http://134.76.18.30:8083/v1/chat/completions"
+
+  judge_model: "meta-llama/Meta-Llama-Guard-2-8B"
+  judge_api_url: "http://134.76.18.30:8081/v1/chat/completions"

@@ -7,7 +7,10 @@ class SafetyJudge:
         self.api_url = config['model']['judge_api_url']  # Use specific API URL
 
     def _call_model(self, prompt, timeout=120, max_retries=3):
-        headers = {"Content-Type": "application/json"}
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 9c89c616-649e-4d77-a6ad-1b1e525f94b5"
+        }
 
         data = {
             "model": self.model_name,

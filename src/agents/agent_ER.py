@@ -6,7 +6,7 @@ import json
 class PersuaderAgent:
     def __init__(self, config):
         self.model_name = config['model']['jailbreaker_model']
-        self.ollama_url = config['model']['ollama_url']
+        self.ollama_url = config['model']['jailbreaker_url']
 
     def generate_response(self, messages, stream=False):
         """
@@ -19,7 +19,10 @@ class PersuaderAgent:
         Returns:
             The model's response as a string
         """
-        headers = {"Content-Type": "application/json"}
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 9c89c616-649e-4d77-a6ad-1b1e525f94b5"
+        }
         data = {
             "model": self.model_name,
             "messages": messages,
