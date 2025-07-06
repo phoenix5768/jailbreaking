@@ -1,8 +1,8 @@
 model:
-#  jailbreaker_model: "huihui_ai/llama3.2-abliterate:1b"
-#  victim_model: "llama3.2:1b"
-  jailbreaker_model: "openchat"
-  victim_model: "mistral"
+  jailbreaker_model: "huihui_ai/llama3.2-abliterate:1b"
+  victim_model: "llama3.2:1b"
+#  jailbreaker_model: "openchat"
+#  victim_model: "mistral"
   ollama_url: "http://localhost:11434/api/chat"  # Ollama local API endpoint
   langchain_model: "llama"  # LangChain model to use
 
