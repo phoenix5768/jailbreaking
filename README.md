@@ -18,7 +18,7 @@ This project explores how Large Language Models (LLMs) can jailbreak other LLMs 
 
 - Integrates a **Safety Judge** model to classify outputs as `safe` or `unsafe`
 
-<br/>
+
 ---
 
 ## Key Components
@@ -29,7 +29,7 @@ This project explores how Large Language Models (LLMs) can jailbreak other LLMs 
 
 - **Safety Judge:** Classifies whether the Victim's response violates safety norms
 
-<br/>
+
 ---
 
 ## Experiments
@@ -44,7 +44,7 @@ Tested:
   - **Single-turn:** 100+ prompts using 14 techniques
   - **Multi-turn:** 100+ prompts using 4 combined strategy categories
 
-<br/>
+
 ---
 
 ## Key Findings
@@ -61,7 +61,7 @@ Tested:
 
 - **Victim behavior varies by model** — Qwen 1.5 showed the strongest resistance
 
-<br/>
+
 ---
 
 ## Project Structure
@@ -79,7 +79,6 @@ jailbreaking/
 └── README.md             # This file
 ```
 
-<br/>
 ---
 
 ## Setup Instructions
@@ -109,7 +108,7 @@ python run_multi_turn.py
 - If you are running models locally, please use `production` branch
 - If you are accessing models via endpoint, please use `end_point_connection` branch
 
-<br/>
+
 ---
 
 ## Citation
