@@ -5,7 +5,7 @@
 This project explores how Large Language Models (LLMs) can jailbreak other LLMs through carefully crafted persuasive dialogue. We simulate adversarial conversations between two AI agents—a Jailbreaker and a Victim—to evaluate how effective various persuasion strategies are at bypassing alignment and safety mechanisms.
 
 ---
-
+</br>
 ## Project Overview
 
 - Simulates **LLM-to-LLM jailbreaks**
@@ -19,7 +19,7 @@ This project explores how Large Language Models (LLMs) can jailbreak other LLMs 
 - Integrates a **Safety Judge** model to classify outputs as `safe` or `unsafe`
 
 ---
-
+</br>
 ## Key Components
 
 - **Jailbreaker Agent:** Generates persuasive prompts to trick the Victim
@@ -29,10 +29,10 @@ This project explores how Large Language Models (LLMs) can jailbreak other LLMs 
 - **Safety Judge:** Classifies whether the Victim's response violates safety norms
 
 ---
-
+</br>
 ## Experiments
 
-Testd:
+Tested:
 - **3 different model setups:**
   - 1B LLaMA 3.2
   - 7–8B models Qwen 1.5, LLaMA 3.1
@@ -43,7 +43,7 @@ Testd:
   - **Multi-turn:** 100+ prompts using 4 combined strategy categories
 
 ---
-
+</br>
 ## Key Findings
 
 - **LLM-to-LLM jailbreaks are real and measurable** (2–14% success rate)
@@ -59,7 +59,7 @@ Testd:
 - **Victim behavior varies by model** — Qwen 1.5 showed the strongest resistance
 
 ---
-
+</br>
 ## Project Structure
 
 ```bash
@@ -76,6 +76,7 @@ jailbreaking/
 ```
 
 ---
+</br>
 ## Setup Instructions
 
 1. Install dependencies:
@@ -105,6 +106,7 @@ python run_multi_turn.py
 
 ---
 
+</br>
 ## Citation
 If you use or reference this work, please cite the following:
 ```bash
