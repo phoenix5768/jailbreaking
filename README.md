@@ -1,6 +1,6 @@
 # Agents Jailbreaking Agents
 
-## Authors: Batyrkhan Abukhanov, Jonas Becker
+## Authors: Batyrkhan Abukhanov,  Jonas Becker
 
 This project explores how Large Language Models (LLMs) can jailbreak other LLMs through carefully crafted persuasive dialogue. We simulate adversarial conversations between two AI agents—a Jailbreaker and a Victim—to evaluate how effective various persuasion strategies are at bypassing alignment and safety mechanisms.
 
