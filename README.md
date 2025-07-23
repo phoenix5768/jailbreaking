@@ -2,7 +2,7 @@
 
 ## Authors: Batyrkhan Abukhanov,  Jonas Becker
 
-This project explores how Large Language Models (LLMs) can jailbreak other LLMs through carefully crafted persuasive dialogue. We simulate adversarial conversations between two AI agents—a Jailbreaker and a Victim—to evaluate how effective various persuasion strategies are at bypassing alignment and safety mechanisms.
+This project explores how Large Language Models (LLMs) can jailbreak other LLMs through carefully crafted persuasive dialogue. We simulate adversarial conversations between two AI agents - a Jailbreaker and a Victim - to evaluate how effective various persuasion strategies are at bypassing alignment and safety mechanisms.
 
 ---
 
@@ -59,7 +59,7 @@ Tested:
 
 - **Small models (1B)** are weak jailbreakers: low-quality prompts, easily derailed
 
-- **Victim behavior varies by model** — Qwen 1.5 showed the strongest resistance
+- **Victim behavior varies by model** - Qwen 1.5 showed the strongest resistance
 
 
 ---
