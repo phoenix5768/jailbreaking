@@ -6,7 +6,7 @@ from loguru import logger
 class PersuadeeAgent:
     def __init__(self, config):
         self.model_name = config['model']['victim_model']
-        self.ollama_url = config['model']['ollama_url']
+        self.ollama_url = config['model']['victim_url']
 
     def generate_response(self, messages, stream=False):
         """
@@ -19,34 +19,26 @@ class PersuadeeAgent:
         Returns:
             The model's response as a string
         """
-        headers = {"Content-Type": "application/json"}
+        headers = {
+            "Content-Type": "application/json",
+            # "Authorization": "Bearer 9c89c616-649e-4d77-a6ad-1b1e525f94b5"
+        }
         data = {
             "model": self.model_name,
             "messages": messages,
-            "temperature": 0.5,
-            "stream": stream
+            "temperature": 0.5
         }
         
         try:
             response = requests.post(self.ollama_url, headers=headers, json=data)
             response.raise_for_status()
-            
-            if stream:
-                full_response = ""
-                for line in response.iter_lines():
-                    if line:
-                        json_response = json.loads(line)
-                        content = json_response.get("message", {}).get("content", "")
-                        full_response += content
-                        logger.info(content, end="", flush=True)
-                    if json_response.get("done", False):
-                        logger.info(' ')
-                        break
-                return full_response
-            else:
-                # Handle non-streaming response
-                json_response = response.json()
-                return json_response["message"]["content"]
+
+            # Handle non-streaming response
+            json_response = response.json()
+            return json_response["message"]["content"]
+
+            # Use this for external endpoint connection
+            # return json_response.get('choices')[0]["message"]["content"]
                 
         except requests.exceptions.RequestException as e:
             logger.error(f"Error connecting to Ollama: {e}")

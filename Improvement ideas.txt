@@ -1,0 +1,21 @@
+Improvement ideas:
+	1) Judge baseline (testing and analyzing the judge)
+	2) Comparing the jailbreak prompts effectiveness with the human-generated prompts effectiveness
+	3) Mentioning in the prompt how many turns does the jailbreaker have
+	4) Test other models
+	5) Try larger models
+
+	why single-turn fails
+	why multi-turn fails
+	why the model is jailbroken (checking by human, or  with other llm)
+	adding more prompts !!!
+
+	how to defend better, how to tune better
+	2 metrics: 1) hoow useful it is, 2) what is jailbreaking efectiveness (противопропорциональны)
+
+    apache 2.0 license on github
+
+
+    Add figures to readme file in Key Findings
+
+
