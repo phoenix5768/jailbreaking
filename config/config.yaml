@@ -10,11 +10,11 @@ model:
 #    judge_api_url: "http://134.76.18.30:8081/v1/chat/completions"
 
     ### Local endpoint
-    victim_model: "llama3.2:1b"
-    victim_url: "http://localhost:11434/api/chat"
+    victim_model: "Qwen2.5-32B-Instruct"
+    victim_url: "http://localhost:8001/v1"
 
-    jailbreaker_model: "huihui_ai/llama3.2-abliterate:1b"
-    jailbreaker_url: "http://localhost:11434/api/chat"
+    jailbreaker_model: "Qwen2.5-32B-Instruct-abliterated"
+    jailbreaker_url: "http://localhost:8000/v1"
 
-    judge_model: "llama-guard3:1b"
-    judge_api_url: "http://localhost:11434/api/generate"
+    judge_model: "Llama-Guard-3-8B"
+    judge_api_url: "http://localhost:8002/v1"
