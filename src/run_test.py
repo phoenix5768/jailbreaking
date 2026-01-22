@@ -10,7 +10,7 @@ def main():
     victim = victim_agent.VLLMChatAgent()
     judge = judge_agent.SafetyJudgeAgent()
 
-    with open("../prompts/persuader_prompts.json", "r") as f:
+    with open("../prompts/prompts_new.json", "r") as f:
         prompts = json.load(f)
 
     # multi_turn.run_test(

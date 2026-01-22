@@ -177,14 +177,14 @@ def run_multi_turn(
     os.makedirs("new_results", exist_ok=True)
 
     techniques = [
-        {
-            "title": "Cognitive Manipulation",
-            "methods": "Belief Consistency Trap, Reverse Psychology, Goal Redirection, Knowledge Boosting, Story Telling"
-        },
         # {
-        #     "title": "Social Role Framing",
-        #     "methods": "Roleplay (Deceptive Persona), Hypothetical Framing, Peer Framing, Trust-building"
+        #     "title": "Cognitive Manipulation",
+        #     "methods": "Belief Consistency Trap, Reverse Psychology, Goal Redirection, Knowledge Boosting, Story Telling"
         # },
+        {
+            "title": "Social Role Framing",
+            "methods": "Roleplay (Deceptive Persona), Hypothetical Framing, Peer Framing, Trust-building"
+        },
         # {
         #     "title": "Emotional Exploitation",
         #     "methods": "Empathy Exploitation, Emotional Guilt, Prior Success Pressure"
@@ -222,7 +222,7 @@ def run_multi_turn(
                 "result": responses
             })
             count += 1
-            logger.info(f"{count}/100")
+            logger.info(f"{count}/520")
 
         filename = f"new_results/{technique.get('title').replace(' ', '_').lower()}_results.json"
         with open(filename, "w") as f:
