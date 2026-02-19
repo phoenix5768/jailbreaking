@@ -74,7 +74,7 @@ jailbreaking/
 │   ├── agents/           # Jailbreaker and Victim agent logic
 │   ├── results/          # Evaluation outputs
 │   ├── tools/            # Multi-turn and single-turn running files
-│   └── main.py           # Orchestrator script for runs
+│   └── old_main.py           # Orchestrator script for runs
 ├── requirements.txt
 └── README.md             # This file
 ```
