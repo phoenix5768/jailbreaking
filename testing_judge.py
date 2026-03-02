@@ -7,7 +7,7 @@ from src.agents import judge_agent
 def run_test():
     judge = judge_agent.SafetyJudgeAgent()
 
-    with open("harm_text.json", "r") as f:
+    with open("prompts/harm_text.json", "r") as f:
         bad_prompts = json.load(f)
 
     bad_ans = []
@@ -21,11 +21,11 @@ def run_test():
             }
         )
 
-    bad_filepath = "judge_bad.json"
+    bad_filepath = "judge_baseline/judge_bad.json"
     with open(bad_filepath, mode='w', encoding='utf-8') as json_file:
         json.dump(bad_ans, json_file, indent=4)
 
-    with open("peaceful_text.json", "r") as f:
+    with open("prompts/peaceful_text.json", "r") as f:
         good_prompts = json.load(f)
 
     good_ans = []
@@ -39,13 +39,13 @@ def run_test():
             }
         )
 
-    good_filepath = "judge_good.json"
+    good_filepath = "judge_baseline/judge_good.json"
     with open(good_filepath, mode='w', encoding='utf-8') as json_file:
         json.dump(good_ans, json_file, indent=4)
 
 
 def count_res():
-    with open("judge_bad.json", "r") as f:
+    with open("judge_baseline/judge_bad.json", "r") as f:
         verdicts = json.load(f)
 
     unsafe = 0
@@ -53,7 +53,7 @@ def count_res():
         if verdict.get("Verdict") == "unsafe":
             unsafe = unsafe + 1
 
-    with open("judge_good.json", "r") as f:
+    with open("judge_baseline/judge_good.json", "r") as f:
         verdicts = json.load(f)
 
     safe = 0

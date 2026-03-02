@@ -49,8 +49,8 @@ def llmlat_dataset():
                 }
             )
 
-        peaceful_filepath = "peaceful_text.json"
-        harmful_filepath = "harm_text.json"
+        peaceful_filepath = "prompts/peaceful_text.json"
+        harmful_filepath = "prompts/harm_text.json"
         with open(peaceful_filepath, mode='w', encoding='utf-8') as peaceful_file:
             json.dump(peaceful_ans, peaceful_file, indent=4)
         
