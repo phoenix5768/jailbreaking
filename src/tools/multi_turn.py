@@ -164,7 +164,8 @@ def run_multi_turn(
         prompts,
         jailbreaker,
         victim,
-        judge
+        judge,
+        run: str = ''
 ):
     """
     Running a multi turn conversation on 100 prompts
@@ -172,6 +173,7 @@ def run_multi_turn(
     :param jailbreaker: jailbreaker agent
     :param victim: victim agent
     :param judge: judge agent
+    :param run: run number
     :return: nothing
     """
     os.makedirs("new_results", exist_ok=True)
@@ -224,6 +226,6 @@ def run_multi_turn(
             count += 1
             logger.info(f"{count}/520")
 
-        filename = f"new_results/{technique.get('title').replace(' ', '_').lower()}_results.json"
+        filename = f"new_results/{technique.get('title').replace(' ', '_').lower()}_results{run}.json"
         with open(filename, "w") as f:
             json.dump(result, f, indent=2)

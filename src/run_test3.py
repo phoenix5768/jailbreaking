@@ -32,7 +32,7 @@ def main():
         jailbreaker=jailbreaker,
         victim=victim,
         judge=judge,
-        run='1'
+        run='3'
     )
 
 

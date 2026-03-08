@@ -8,9 +8,9 @@ Message = Dict[str, str]  # {"role": "...", "content": "..."}
 
 
 class VLLMChatAgent:
-    def __init__(self, temperature: float = 0.7, max_tokens: int = 256):
+    def __init__(self, model: str = "Qwen2.5-72B-Instruct-AWQ", temperature: float = 0.7, max_tokens: int = 256):
         self.client = OpenAI(base_url="http://localhost:8001/v1", api_key="EMPTY")
-        self.model = "Qwen2.5-72B-Instruct-AWQ"
+        self.model = model
         self.temperature = 0.3
         self.max_tokens = 256
 
