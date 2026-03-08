@@ -8,7 +8,7 @@ import json
 
 def main():
     jailbreaker = jailbreaker_agent.VLLMChatAgent(model="Qwen2.5-72B-Instruct-AWQ")
-    victim = victim_agent.VLLMChatAgent(model="llama-3.3-70b-instruct-awq")
+    victim = victim_agent.VLLMChatAgent(model="Qwen2.5-72B-Instruct-AWQ")
     judge = judge_agent.SafetyJudgeAgent()
 
     BASE_DIR = Path(__file__).resolve().parent
