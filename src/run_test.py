@@ -17,22 +17,12 @@ def main():
     with open(PROMPTS_PATH, "r") as f:
         prompts = json.load(f)
 
-    # with open("../prompts/prompts_new.json", "r") as f:
-    #     prompts = json.load(f)
-
-    # multi_turn.run_test(
-    #     prompts = prompts,
-    #     jailbreaker = jailbreaker,
-    #     victim = victim,
-    #     judge = judge
-    # )
-
     multi_turn.run_multi_turn(
         prompts=prompts,
         jailbreaker=jailbreaker,
         victim=victim,
         judge=judge,
-        run='1'
+        run='q2'
     )
 
 
