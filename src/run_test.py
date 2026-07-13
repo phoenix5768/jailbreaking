@@ -7,9 +7,9 @@ import json
 
 
 def main():
-    jailbreaker = jailbreaker_agent.VLLMChatAgent(model="Qwen2.5-72B-Instruct-AWQ")
-    victim = victim_agent.VLLMChatAgent(model="Qwen2.5-72B-Instruct-AWQ")
-    judge = judge_agent.SafetyJudgeAgent()
+    jailbreaker = jailbreaker_agent.VLLMChatAgent(model="attacker")
+    victim = victim_agent.VLLMChatAgent(model="qwen25-7b-dpo-final")
+    judge = judge_agent.SafetyJudgeAgent(model="judge")
 
     BASE_DIR = Path(__file__).resolve().parent
     PROMPTS_PATH = BASE_DIR.parent / "prompts" / "prompts_new.json"
@@ -22,7 +22,7 @@ def main():
         jailbreaker=jailbreaker,
         victim=victim,
         judge=judge,
-        run='q2'
+        run='dpo_f'
     )
 
 
