@@ -174,14 +174,22 @@ def compute_schedule_info(dataset_size: int, batch_size: int, grad_accum: int, e
 
 def load_trainable_peft_model(base_model_id: str, adapter_path: str, local_files_only: bool):
     base = AutoModelForCausalLM.from_pretrained(
-        base_model_id,
+    base_model_id,
         torch_dtype=torch.bfloat16,
-        device_map="auto",
         trust_remote_code=True,
         local_files_only=local_files_only,
+        device_map=None,
     )
+
     base.config.use_cache = False
-    model = PeftModel.from_pretrained(base, adapter_path, is_trainable=True)
+    base.gradient_checkpointing_enable()
+
+    model = PeftModel.from_pretrained(
+        base,
+        adapter_path,
+        is_trainable=True,
+    )
+
     return model
 
 
@@ -540,6 +548,7 @@ def main():
             "torch_dtype": torch.bfloat16,
             "trust_remote_code": True,
             "local_files_only": args.local_files_only,
+            "device_map": None, 
         } if model is None else None,
     )
 

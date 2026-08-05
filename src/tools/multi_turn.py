@@ -176,8 +176,7 @@ def run_multi_turn(
     :param run: run number
     :return: nothing
     """
-    # os.makedirs("new_results", exist_ok=True)
-    os.makedirs("qwen7b_sft_lora", exist_ok=True)
+    os.makedirs("new_results", exist_ok=True)
 
     techniques = [
         {
@@ -227,7 +226,6 @@ def run_multi_turn(
             count += 1
             logger.info(f"{count}/520")
 
-        # filename = f"new_results/{technique.get('title').replace(' ', '_').lower()}_results{run}.json"
-        filename = f"qwen7b_sft_lora/{technique.get('title').replace(' ', '_').lower()}_results{run}.json"
+        filename = f"new_results/{technique.get('title').replace(' ', '_').lower()}_results{run}.json"
         with open(filename, "w") as f:
             json.dump(result, f, indent=2)
